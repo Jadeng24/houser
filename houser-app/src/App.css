@@ -4,16 +4,23 @@
 body {
   background: #afd4c0;
 }
-.content {
-  width: 80%;
-  background: white;
+.contentHolder {
   display: flex;
   justify-content: center;
-  margin-left: 10%;
+}
+.content {
+  width: 75vw;
+  background: white;
   height: 100vh;
+}
+.loginContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .Login {
   padding-top: 100px;
+  width: 55vw;
 }
 .houserLogo {
   margin-bottom: 50px;
@@ -23,7 +30,6 @@ body {
   text-align: left;
   padding: 0px;
   margin: 0;
-  padding-left: 20px;
 }
 .Login input {
   padding: 0;
