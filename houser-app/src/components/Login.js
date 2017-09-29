@@ -16,7 +16,7 @@ export default class Login extends Component {
                     
                 <Link to="/dashboard"><button className="loginBtn"> Login </button></Link>
 
-                <button className="registerBtn"> Register </button>
+                <Link to="/dashboard"><button className="registerBtn"> Register </button></Link>
                 </div>
             </div>    
         )
