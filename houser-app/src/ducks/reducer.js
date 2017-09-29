@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 let initialState = {
     propName: '',
     propDescription: '',
@@ -6,9 +8,10 @@ let initialState = {
     state: '',
     zipcode: '',
     imageUrl: '',
-    loanAmount: '',
-    monthlyMortgage: '',
-    desiredRent: ''
+    loanAmount: 0,
+    monthlyMortgage: 0,
+    desiredRent: 0,
+    properties: []
 }
 
 const UPDATE_PROP_NAME = "UPDATE_PROP_NAME";
@@ -21,6 +24,7 @@ const UPDATE_IMAGEURL = "UPDATE_IMAGEURL";
 const UPDATE_LOAN_AMOUNT = "UPDATE_LOAN_AMOUNT";
 const UPDATE_MONTHLY_MORTGAGE = "UPDATE_MONTHLY_MORTGAGE";
 const UPDATE_DESIRED_RENT = "UPDATE_DESIRED_RENT";
+const GET_PROPERTIES = "GET_PROPERTIES";
 
 function reducer(state = initialState, action) {
     switch(action.type) {
@@ -44,6 +48,9 @@ function reducer(state = initialState, action) {
             return Object.assign({}, state, {monthlyMortgage: action.payload})
         case UPDATE_DESIRED_RENT:
             return Object.assign({}, state, {desiredRent: action.payload})
+        case GET_PROPERTIES + '_FULFILLED':
+            console.log('worked', action.payload)
+            return Object.assign({}, state, {properties: action.payload})
         default: 
             return state;
     }
@@ -116,6 +123,14 @@ export function updateDesiredRent(rent) {
     return {
         type: UPDATE_DESIRED_RENT,
         payload: rent
+    }
+}
+
+export function getProperties(request) {
+    const promise = axios.get('http://localhost:3000/api/properties').then(res => res.data)
+    return {
+        type: GET_PROPERTIES,
+        payload: promise
     }
 }
 
