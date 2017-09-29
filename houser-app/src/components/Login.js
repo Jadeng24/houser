@@ -14,7 +14,6 @@ export default class Login extends Component {
                 <h2>Password</h2>
                 <input />
                 <br />
-                    {/* postgres://xosnchrtlhwtjl:354bbb3654c0fec98f206c782b3b8a221dfa73bcc1cc34907a64c500fc60b657@ec2-184-73-189-221.compute-1.amazonaws.com:5432/da9kctg0fhrpak?ssl=true */}
                 <Link to="/dashboard"><button className="loginBtn"> Login </button></Link>
 
                 <Link to="/dashboard"><button className="registerBtn"> Register </button></Link>
