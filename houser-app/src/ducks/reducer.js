@@ -22,7 +22,7 @@ const UPDATE_LOAN_AMOUNT = "UPDATE_LOAN_AMOUNT";
 const UPDATE_MONTHLY_MORTGAGE = "UPDATE_MONTHLY_MORTGAGE";
 const UPDATE_DESIRED_RENT = "UPDATE_DESIRED_RENT";
 
-function reducer(state = intialState, action) {
+function reducer(state = initialState, action) {
     switch(action.type) {
         case UPDATE_PROP_NAME:
             return Object.assign({}, state, {propName: action.payload})
