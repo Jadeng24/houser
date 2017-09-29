@@ -12,7 +12,7 @@ class Dashboard extends Component {
             <Nav/>
             <div className="contentHolder">    
             <div className="content">
-                        <div className="" onClick={getProperties()}></div>
+                        <div className="blue" onClick={()=> getProperties()}></div>
                        <br/> 
             
                        <Link to="/step1"><button className="addPropBtn"> Add new property</button></Link>

@@ -8,7 +8,7 @@ const checkForSession = require('./middlewares/checkForSession.js');
 
 const auth_controller = require('./controllers/auth_controller.js');
 const search_controller = require('./controllers/search_controller.js');
-const home_controller = require('./controller/home_controller.js');
+const home_controller = require('./controllers/home_controller.js');
 
 const app = express();
 
