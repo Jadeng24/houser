@@ -118,3 +118,5 @@ export function updateDesiredRent(rent) {
         payload: rent
     }
 }
+
+export default reducer;
