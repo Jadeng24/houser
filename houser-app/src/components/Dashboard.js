@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
-export default class Dashboard extends Component {
+import { connect } from 'react-redux';
+import { getProperties } from './../ducks/reducer';
+
+class Dashboard extends Component {
 
     render() {
         return (
@@ -9,7 +12,7 @@ export default class Dashboard extends Component {
             <Nav/>
             <div className="contentHolder">    
             <div className="content">
-               
+                        <div className="" onClick={getProperties()}></div>
                        <br/> 
             
                        <Link to="/step1"><button className="addPropBtn"> Add new property</button></Link>
@@ -19,3 +22,9 @@ export default class Dashboard extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return state;
+}
+
+export default connect(mapStateToProps)(Dashboard);
